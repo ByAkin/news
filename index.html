@@ -17,6 +17,7 @@
 body{
     background:#0a0a0a;
     color:white;
+    padding-top:80px;
 }
 
 header{
@@ -85,17 +86,143 @@ footer{
     padding:50px;
     color:#666;
 }
+    
+   nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(10,10,10,0.12);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+    
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#B6D800;
+}
+
+.links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.links a{
+    color:#bbb;
+    text-decoration:none;
+    transition:all .3s ease;
+}
+
+.links a:hover{
+    color:#B6D800;
+}
+
+.nav-discord{
+    padding:8px 14px;
+    border-radius:10px;
+    background:#5865F2;
+    color:white !important;
+    font-weight:600;
+}
+
+.nav-discord:hover{
+    background:#B6D800;
+    color:black !important;
+}
+
+    .featured-idea{
+    background:linear-gradient(
+        135deg,
+        rgba(182,216,0,0.12),
+        rgba(182,216,0,0.03)
+    );
+    border:1px solid rgba(182,216,0,0.2);
+    border-radius:20px;
+    padding:35px;
+    margin-bottom:50px;
+}
+
+.featured-tag{
+    color:#B6D800;
+    font-size:.8rem;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.featured-idea h2{
+    margin:15px 0;
+    font-size:2rem;
+}
+
+.featured-idea p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+.insight{
+    margin-top:20px;
+    padding:15px;
+    border-left:3px solid #B6D800;
+    background:#111;
+    color:#aaa;
+}
+    
 </style>
 </head>
 <body>
+    
+<nav>
+<div class="logo">AKIN</div>
 
+<div class="links">
+<a href="https://byakin.github.io/TheAkinProject/">Home</a>
+<a href="https://byakin.github.io/news/">News</a>
+<a href="https://www.youtube.com/@The_Akin_Project">YouTube</a>
+<a href="https://www.linkedin.com/in/akin-founder">LinkedIn</a>
+<a href="https://github.com/ByAkin">GitHub</a>
+<a href="https://discord.gg/kYnNsAgM" class="nav-discord">
+Discord
+</a>
+</div>
+</nav>
+    
 <header>
     <h1>NEWS</h1>
-    <p>Startup news, tech trends, AI updates, and business ideas.</p>
+    <p>Startup news, tech trends, AI updates, and business ideas for builders.</p>
 </header>
-
+    
 <div class="container">
 
+     <section class="featured-idea">
+
+    <span class="featured-tag">TODAY'S OPPORTUNITY</span>
+
+    <h2>AI Tutors For Small Niches</h2>
+
+    <p>
+        Most AI tools target everyone. The opportunity is building highly
+        specialized AI tutors for a single audience — coding beginners,
+        medical students, language learners, or exam preparation.
+    </p>
+
+    <div class="insight">
+        <strong>Why it matters:</strong>
+        Niche products often beat general products because they solve one
+        problem exceptionally well.
+    </div>
+
+</section>
+    
     <h2 class="section-title">Latest News</h2>
 
     <div class="news-grid">
@@ -148,6 +275,60 @@ footer{
         </div>
 
         <div class="card">
+    <span class="tag">TREND</span>
+    <h3>The Rise Of One-Person Companies</h3>
+    <p>
+        Founders are increasingly using AI to handle tasks that once required
+        designers, marketers, and support teams.
+    </p>
+</div>
+
+<div class="card">
+    <span class="tag">TECH</span>
+    <h3>Voice Interfaces Are Making A Comeback</h3>
+    <p>
+        Better speech recognition is enabling new products that rely less on
+        typing and more on conversation.
+    </p>
+</div>
+
+<div class="card">
+    <span class="tag">IDEA</span>
+    <h3>Local Business Growth Reports</h3>
+    <p>
+        Deliver weekly growth suggestions and competitor insights to local
+        businesses for a monthly subscription.
+    </p>
+</div>
+
+<div class="card">
+    <span class="tag">STARTUP</span>
+    <h3>Community-Led Products Continue To Win</h3>
+    <p>
+        Products built around engaged communities often gain traction faster
+        than products built in isolation.
+    </p>
+</div>
+
+<div class="card">
+    <span class="tag">AI</span>
+    <h3>Personal AI Assistants Are Becoming Practical</h3>
+    <p>
+        AI tools are moving beyond chatbots and becoming everyday assistants
+        that help organize work and decisions.
+    </p>
+</div>
+
+<div class="card">
+    <span class="tag">OPPORTUNITY</span>
+    <h3>Teen Creator Economy Is Expanding</h3>
+    <p>
+        More young people are earning through content, communities, and
+        digital products than ever before.
+    </p>
+</div>
+        
+        <div class="card">
             <span class="tag">IDEA</span>
             <h3>Startup Matchmaking Community</h3>
             <p>
@@ -160,6 +341,26 @@ footer{
 
 </div>
 
+    <section class="featured-idea" style="margin-top:60px;">
+
+<span class="featured-tag">TRENDING</span>
+
+<h2>3 Things Builders Should Watch This Week</h2>
+
+<p>
+• AI agents replacing repetitive work<br>
+• Niche communities growing faster than social media audiences<br>
+• One-person startups reaching profitability with AI
+</p>
+
+<div class="insight">
+<strong>Takeaway:</strong>
+The biggest opportunities are no longer in building bigger products.
+They're in solving smaller problems better.
+</div>
+
+</section>
+    
 <footer>
     © 2026 The Akin Project
 </footer>
