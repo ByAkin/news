@@ -20,10 +20,13 @@ body{
     padding-top:80px;
 }
 
-header{
-    padding:100px 15%;
-    text-align:center;
-    border-bottom:1px solid #222;
+    .header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+    header{
     padding: 20px 5%;
 }
 
@@ -88,21 +91,27 @@ footer{
     color:#666;
 }
     
-   nav{
+nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 40px;
-    background:rgba(10,10,10,0.12);
+
+   background:rgba(10,10,10,0.12);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
+
     border-bottom:1px solid rgba(255,255,255,0.06);
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
 }
     
 .logo{
@@ -111,7 +120,7 @@ footer{
     letter-spacing:1px;
     color:#B6D800;
 }
-
+    
 .links{
     display:flex;
     align-items:center;
@@ -178,34 +187,27 @@ footer{
     color:#aaa;
 }
 
- @media(max-width:700px){
+@media(max-width:700px){
 
     nav{
         flex-direction:column;
-        gap:12px;
-        padding:15px 12px;
+        gap:15px;
     }
 
     .links{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:10px;
-        width:100%;
+        text-align:center;
     }
 
     .links a{
-        margin:0;
-        font-size:0.9rem;
+        margin:0 10px;
     }
 
     .hero{
         min-height:75vh;
-        padding-top:80px;
     }
 
-    .container{
-        padding:140px 20px 0;
+    .section{
+        padding:70px 0;
     }
 }
     
