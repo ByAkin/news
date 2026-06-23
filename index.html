@@ -24,6 +24,7 @@ header{
     padding:100px 15%;
     text-align:center;
     border-bottom:1px solid #222;
+    padding: 20px 5%;
 }
 
 header h1{
@@ -176,6 +177,37 @@ footer{
     background:#111;
     color:#aaa;
 }
+
+ @media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+        padding:15px 12px;
+    }
+
+    .links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+        width:100%;
+    }
+
+    .links a{
+        margin:0;
+        font-size:0.9rem;
+    }
+
+    .hero{
+        min-height:75vh;
+        padding-top:80px;
+    }
+
+    .container{
+        padding:140px 20px 0;
+    }
+}
     
 </style>
 </head>
@@ -188,7 +220,6 @@ footer{
 <a href="https://byakin.github.io/TheAkinProject/">Home</a>
 <a href="https://www.youtube.com/@The_Akin_Project">YouTube</a>
 <a href="https://www.linkedin.com/in/akin-founder">LinkedIn</a>
-<a href="https://github.com/ByAkin">GitHub</a>
 <a href="https://discord.gg/kYnNsAgM" class="nav-discord">
 Discord
 </a>
