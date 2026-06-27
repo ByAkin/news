@@ -443,9 +443,7 @@ const c = document.getElementById('bg');
 const ctx = c.getContext('2d');
 let W, H, pts;
 let mouse = { x: -9999, y: -9999 };
-
 function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
-
 function init(){
   resize();
   pts = Array.from({length:80}, () => ({
@@ -456,14 +454,9 @@ function init(){
     r: Math.random()*2+1
   }));
 }
-
 function draw(){
   ctx.clearRect(0,0,W,H);
   pts.forEach(p => {
-    const dx=mouse.x-p.x, dy=mouse.y-p.y, dist=Math.sqrt(dx*dx+dy*dy);
-    if(dist<180){ const force=(180-dist)/180*0.04; p.vx+=dx/dist*force; p.vy+=dy/dist*force; }
-    const speed=Math.sqrt(p.vx*p.vx+p.vy*p.vy);
-    if(speed>2){ p.vx=(p.vx/speed)*2; p.vy=(p.vy/speed)*2; }
     p.x+=p.vx; p.y+=p.vy;
     if(p.x<0||p.x>W) p.vx*=-1;
     if(p.y<0||p.y>H) p.vy*=-1;
@@ -491,21 +484,12 @@ function draw(){
   });
   requestAnimationFrame(draw);
 }
-
 window.addEventListener('resize', resize);
 init();
 draw();
-
-// desktop only interactions
 if(window.innerWidth > 700){
   document.addEventListener('mousemove', e => { mouse.x=e.clientX; mouse.y=e.clientY; });
   document.addEventListener('mouseleave', () => { mouse.x=-9999; mouse.y=-9999; });
-  document.addEventListener('click', () => {
-    pts.forEach(p => {
-      const dx=p.x-mouse.x, dy=p.y-mouse.y, dist=Math.sqrt(dx*dx+dy*dy)||1;
-      p.vx+=(dx/dist)*4; p.vy+=(dy/dist)*4;
-    });
-  });
 }
 </script>
     
