@@ -439,6 +439,9 @@ a real shot at running a serious business alone.
 </footer>
 
 <script>
+
+if(window.innerWidth <= 700) return;
+    
 const c = document.getElementById('bg');
 const ctx = c.getContext('2d');
 let W, H, pts;
@@ -534,7 +537,8 @@ window.addEventListener('resize', resize);
 init();
 draw();
 
-    document.addEventListener('click', () => {
+document.addEventListener('click', () => {
+  if(window.innerWidth <= 700) return;
   pts.forEach(p => {
     const dx = p.x - mouse.x;
     const dy = p.y - mouse.y;
