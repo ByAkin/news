@@ -544,6 +544,28 @@ draw();
     p.vy += (dy / dist) * force;
   });
 });
+
+    document.addEventListener('touchmove', e => {
+  mouse.x = e.touches[0].clientX;
+  mouse.y = e.touches[0].clientY;
+}, { passive: true });
+
+document.addEventListener('touchend', () => {
+  mouse.x = -9999;
+  mouse.y = -9999;
+});
+
+document.addEventListener('touchstart', e => {
+  mouse.x = e.touches[0].clientX;
+  mouse.y = e.touches[0].clientY;
+  pts.forEach(p => {
+    const dx = p.x - mouse.x;
+    const dy = p.y - mouse.y;
+    const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+    p.vx += (dx / dist) * 4;
+    p.vy += (dy / dist) * 4;
+  });
+}, { passive: true });
     
 </script>
     
